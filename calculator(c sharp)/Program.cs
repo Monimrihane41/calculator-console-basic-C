@@ -15,7 +15,8 @@ namespace calculator_c_sharp_
             int num1;
             int num2;
             string answer;
-            
+            string retry;
+            do { 
             Console.WriteLine("HELLO USER :)  Welcome to The C# Calculator");
             Console.WriteLine("Enter The First Number : ");
             num1 = int.Parse(Console.ReadLine());
@@ -27,11 +28,11 @@ namespace calculator_c_sharp_
 
             if (answer == "a")
             {
-               Console.WriteLine(num1  + " + " + num2 + " = " + (num1 + num2));
-            }else if( answer == "b")
+                Console.WriteLine(num1 + " + " + num2 + " = " + (num1 + num2));
+            } else if (answer == "b")
             {
                 Console.WriteLine(num1 + " - " + num2 + " = " + (num1 - num2));
-            }else if (answer == "c")
+            } else if (answer == "c")
             {
                 Console.WriteLine(num1 + " / " + num2 + " = " + (num1 / num2));
             }
@@ -39,8 +40,12 @@ namespace calculator_c_sharp_
             {
                 Console.WriteLine(num1 + " * " + num2 + " = " + (num1 * num2));
             }
+                Console.WriteLine("if you want to do another operation Press (y/Y)");
+                retry = Console.ReadLine();
+            
 
-            Console.WriteLine("Thank you for Using The Calculator Programme !");
+        }while(retry == "Y" || retry == "y");
+
         }
         
     }
